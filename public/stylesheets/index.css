@@ -1,0 +1,236 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  min-height: 100vh;
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.maincontainer {
+  letter-spacing: 0.6px;
+  font-family: 'Barlow Condensed', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  width: 900px;
+  max-width: 100%;
+  height: auto;
+  flex-direction: column;
+  border: 1px solid #e50914;
+  border-radius: 15px;
+  padding: 20px;
+  box-shadow: 0 8px 32px rgba(229, 9, 20, 0.3);
+  backdrop-filter: blur(10px);
+  position: relative;
+}
+
+.box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent, rgba(229, 9, 20, 0.05), transparent);
+  border-radius: 15px;
+  pointer-events: none;
+}
+
+.headingbox {
+  display: flex;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #e50914 0%, #b20710 100%);
+  color: white;
+  width: 200px;
+  margin: 10px 10px 0px 10px;
+  padding: 10px;
+  align-self: flex-start;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.headingbox img {
+  filter: brightness(0) invert(1);
+}
+
+.form-control {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.form-control:focus {
+  border-color: #e50914;
+  box-shadow: 0 0 0 0.2rem rgba(229, 9, 20, 0.25);
+  background: #fff;
+}
+
+.form-select {
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+.form-select:focus {
+  border-color: #e50914;
+  box-shadow: 0 0 0 0.2rem rgba(229, 9, 20, 0.25);
+  background: #fff;
+}
+
+.form-check-input:checked {
+  background-color: #e50914;
+  border-color: #e50914;
+}
+
+.form-check-input:focus {
+  border-color: #e50914;
+  box-shadow: 0 0 0 0.25rem rgba(229, 9, 20, 0.25);
+}
+
+.btn-netflix {
+  background: linear-gradient(135deg, #e50914 0%, #b20710 100%);
+  border: none;
+  color: #ffffff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.4);
+}
+
+.btn-netflix:hover {
+  background: linear-gradient(135deg, #b20710 0%, #e50914 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(229, 9, 20, 0.6);
+  color: white;
+}
+
+.btn-secondary {
+  background: linear-gradient(135deg, #6c757d 0%, #5a6268 100%);
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.4);
+}
+
+.btn-secondary:hover {
+  background: linear-gradient(135deg, #5a6268 0%, #6c757d 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(108, 117, 125, 0.6);
+  color: white;
+}
+
+.form-label {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+textarea.form-control {
+  resize: vertical;
+  min-height: 100px;
+}
+
+#posterPreview {
+  transition: all 0.3s ease;
+  border: 2px solid #ddd;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#posterPreview:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.row {
+  margin-bottom: 5px;
+}
+
+hr {
+  border: none;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #e50914, transparent);
+  margin: 20px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .box {
+    width: 95%;
+    padding: 15px;
+  }
+  
+  .headingbox {
+    width: 100%;
+    margin: 0 0 15px 0;
+  }
+  
+  .col-6, .col-3, .col-4, .col-9 {
+    margin-bottom: 10px;
+  }
+}
+
+/* Animation for form elements */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.box {
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Enhanced focus states */
+.form-control:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #e50914;
+  box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.1);
+}
+
+/* Custom scrollbar for textarea */
+textarea::-webkit-scrollbar {
+  width: 8px;
+}
+
+textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background: #e50914;
+  border-radius: 10px;
+}
+
+textarea::-webkit-scrollbar-thumb:hover {
+  background: #b20710;
+}

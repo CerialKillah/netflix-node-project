@@ -1,0 +1,36 @@
+body {
+      background: linear-gradient(135deg, #000000, #141414);
+      color: #ffffff;
+    }
+
+    .netflix-header {
+      background: rgba(0, 0, 0, 0.9);
+      border: 2px solid #e50914;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
+    }
+
+    .table-dark {
+      background: rgba(20, 20, 20, 0.9);
+    }
+
+    .table-dark thead th {
+      background: #e50914;
+      border-color: #e50914;
+    }
+
+    .table-dark tbody tr:hover {
+      background-color: rgba(229, 9, 20, 0.1);
+    }
+
+    .poster-img {
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .poster-img:hover {
+      transform: scale(1.05);
+    }

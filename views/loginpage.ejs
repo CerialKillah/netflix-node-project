@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Admin - Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+
+    <script src="https://kit.fontawesome.com/941dbd7ae9.js" crossorigin="anonymous"></script>
+   <link rel="stylesheet" href="/stylesheets/login.css">
+</head>
+
+<body class="min-vh-100 d-flex align-items-center">
+
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-4 col-lg-5 col-md-6 col-sm-8">
+
+               
+                <div class="card shadow-lg border-0 bg-dark">
+
+                   
+                    <div class="card-header text-center py-4 border-0" style="background-color: #e50914;">
+                        <img src="/images/netflix-logo.png" class="logo-filter mb-3" style="width: 60px; height: 80px;"
+                            alt="Netflix Logo" />
+                        <h3 class="text-white fw-bold mb-1">Netflix Admin</h3>
+                        <p class="text-white mb-0 small">Content Management System</p>
+                    </div>
+
+                
+                    <div class="card-body p-4">
+                        <form action="/admin/chk_admin_login" method="post">
+
+                           
+                            <div class="mb-3">
+                                <label for="emailid" class="form-label text-white fw-semibold">
+                                    <i class="fas fa-envelope me-2 text-danger"></i>Email Address/Mobile No.
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-secondary text-white border-secondary">
+                                        <i class="fas fa-user"></i>
+                                    </span>
+                                    <input type="text" class="form-control bg-dark text-white border-secondary"
+                                        id="emailid" name="emailid" placeholder="Enter your email or mobile no." required />
+                                </div>
+                            </div>
+
+                            
+                            <div class="mb-3">
+                                <label for="password" class="form-label text-white fw-semibold">
+                                    <i class="fas fa-lock me-2 text-danger"></i>Password
+                                </label>
+                                <div class="input-group">
+                                    <span class="input-group-text bg-secondary text-white border-secondary">
+                                        <i class="fas fa-key"></i>
+                                    </span>
+                                    <input type="password" class="form-control bg-dark text-white border-secondary"
+                                        id="password" name="password" placeholder="Enter your password" required />
+                                </div>
+                            </div>
+
+                            <!-- Remember Me & Forgot Password -->
+                            <div class="d-flex justify-content-between align-items-center mb-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="rememberMe">
+                                    <label class="form-check-label text-white-50 small" for="rememberMe">
+                                        Remember me
+                                    </label>
+                                </div>
+                                <a href="#" class="text-decoration-none text-white-50 small">
+                                    Forgot Password?
+                                </a>
+                            </div>
+
+                      
+                            <button type="submit" class="btn btn-netflix w-100 py-2 fw-semibold">
+                                <i class="fas fa-sign-in-alt me-2"></i>Sign In
+                            </button>
+
+                          
+                            <% if (typeof message !=='undefined' && message) { %>
+                                <div class="alert alert-<%= color === 'green' ? 'success' : 'danger' %> mt-3">
+                                    <i
+                                        class="fas fa-<%= color === 'green' ? 'check-circle' : 'exclamation-triangle' %> me-2"></i>
+                                    <%= message %>
+                                </div>
+                                <% } %>
+
+                        </form>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="card-footer bg-dark text-center py-3 border-secondary">
+                        <small class="text-white-50">
+                            <i class="fas fa-shield-alt me-1 text-danger"></i>
+                            Secure Admin Access Only
+                        </small>
+                    </div>
+
+                </div>
+
+                <!-- Copyright -->
+                <div class="text-center mt-3">
+                    <small class="text-white-50">
+                        © 2025 Netflix Admin Panel. All rights reserved.
+                    </small>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>
+
+
+
+
+

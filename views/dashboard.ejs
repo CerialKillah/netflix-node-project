@@ -1,0 +1,121 @@
+<html>
+<head>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet" />
+  
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/941dbd7ae9.js" crossorigin="anonymous"></script>
+  
+  <link rel="stylesheet" href="/stylesheets/dashboardstyle.css">
+</head>
+
+<body class="min-vh-100">
+  <div class="d-flex flex-column">
+  
+    <div class="netflix-header d-flex align-items-center shadow-lg" style="height: 80px;">
+      <img src="/images/netflix-logo.png" 
+           class="logo-filter ms-3 mt-2 mb-2" 
+           style="width: 40px; height: 60px;" />
+      <div class="ms-3">
+        <h4 class="text-white mb-0 fw-bold">Netflix Admin Panel</h4>
+        <small class="text-white-50">Content Management System</small>
+      </div>
+      <div class="logoutbtn ms-auto me-3 text-white fw-semibold px-3 py-2 rounded-pill bg-white bg-opacity-10 transition-all" 
+           style="cursor: pointer; transition: all 0.3s ease;">
+           <a href="/admin/logout" target="_blank" style="text-decoration:none; color: white;">
+        <i class="fas fa-sign-out-alt me-2"></i>Logout
+        </a>
+      </div>
+    </div>
+    
+    <div class="d-flex p-4 gap-4">
+
+      <div class="netflix-sidebar rounded-4 shadow-lg d-flex flex-column p-4" style="width: 300px; min-height: 600px;">
+  
+        <div class="profile-section w-100 d-flex flex-column align-items-center p-4 mb-4 rounded-4">
+          <img src="/images/<%=data.picture%>" 
+               class="rounded-circle border border-3 border-netflix shadow-netflix mb-3" 
+               style="width: 100px; height: 100px;" />
+          <div class="fs-5 fw-bold text-white text-center mb-1">
+            Netflix Admin
+          </div>
+          <div class="fs-6 text-white-50 text-center">
+            <%=data.adminname%>
+          </div>
+          <div class="fs-6 text-white-50 text-center">
+            <%=data.emailid%>
+          </div>
+        </div>
+
+    
+        <div class="flex-fill">
+          <div class="text-white-50 fs-7 fw-semibold mb-3 text-uppercase" style="letter-spacing: 1px; font-size: 12px;">
+            Program Management
+          </div>
+          
+     
+          <div class="sidebar-item d-flex align-items-center mb-2 p-2 rounded-2 transition-all">
+            <i class="fas fa-plus-circle netflix-red-text" style="width: 25px; font-size: 18px;"></i>
+            <a href="/programs/program_interface" target="mw" class="text-decoration-none">
+              <div class="txt ms-3 text-white fw-medium" style="cursor: pointer;">
+                Add New Program
+              </div>
+            </a>
+          </div>
+          
+     
+          <div class="sidebar-item d-flex align-items-center mb-2 p-2 rounded-2 transition-all">
+            <i class="fas fa-search netflix-red-text" style="width: 25px; font-size: 18px;"></i>
+            <a href="/programs/search_program" target="mw" class="text-decoration-none">
+              <div class="txt ms-3 text-white fw-medium" style="cursor: pointer;">
+                Search Program
+              </div>
+            </a>
+          </div>
+          
+     
+          <div class="sidebar-item d-flex align-items-center mb-2 p-2 rounded-2 transition-all">
+            <i class="fas fa-film netflix-red-text" style="width: 25px; font-size: 18px;"></i>
+            <a href="/programs/display_all" target="mw" class="text-decoration-none">
+              <div class="txt ms-3 text-white fw-medium" style="cursor: pointer;">
+                All Programs
+              </div>
+            </a>
+          </div>
+          
+          <hr class="border-white border-opacity-10 my-4">
+          
+          <div class="mt-auto pt-4">
+            <div class="sidebar-item transition-all d-flex align-items-center p-2 rounded-2">
+              <i class="fas fa-sign-out-alt text-secondary" style="width: 25px; font-size: 18px;"></i>
+              <div class="txt ms-3 text-secondary fw-medium" style="cursor: pointer;">
+                <a href="/admin/logout" target="_blank" style="text-decoration:none; color:#6c757d;">
+                Logout
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    
+      <div class="flex-fill bg-white bg-opacity-5 rounded-4 overflow-hidden shadow-lg embed-responsive">
+        <iframe src="/programs/display_all"  
+                width="100%" 
+                height="600px" 
+                name="mw" 
+                class="embed-responsive-item">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+body {
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.btn-netflix {
+    background: #e50914;
+    border-color: #e50914;
+    color: #fff;
+}
+
+.btn-netflix:hover {
+    background: #b20710;
+    border-color: #b20710;
+    color: #fff;
+}
+
+.logo-filter {
+    filter: brightness(0) invert(1);
+}
+

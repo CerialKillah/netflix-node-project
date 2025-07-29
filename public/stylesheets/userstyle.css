@@ -1,0 +1,46 @@
+        body {
+            background-color: #141414;
+        }
+
+        .netflix-logo {
+            color: #e50914;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .content-card {
+            min-width: 250px;
+            height: 140px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .content-card:hover {
+            transform: scale(1.05);
+        }
+
+        .content-video {
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .content-card:hover .content-video {
+            opacity: 1;
+        }
+
+        .content-card:hover .content-poster {
+            opacity: 0;
+        }
+
+        .scroll-x {
+            overflow-x: auto;
+        }
+
+        .scroll-x::-webkit-scrollbar {
+            height: 6px;
+        }
+
+        .scroll-x::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 3px;
+        }

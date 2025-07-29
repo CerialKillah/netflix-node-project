@@ -1,0 +1,58 @@
+/* Netflix Dashboard - Bootstrap Enhanced CSS */
+
+:root {
+  --netflix-red: #e50914;
+  --netflix-dark-red: #b20710;
+}
+
+body {
+  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+  font-family: 'Barlow Condensed', sans-serif;
+}
+
+.netflix-header {
+  background: linear-gradient(135deg, var(--netflix-red) 0%, var(--netflix-dark-red) 100%);
+}
+
+.netflix-sidebar {
+  background: linear-gradient(180deg, #1a1a1a 0%, #2d2d2d 100%);
+}
+
+.sidebar-item:hover {
+  background: rgba(229, 9, 20, 0.1) !important;
+  transform: translateX(5px);
+}
+
+.sidebar-item:hover .txt a {
+  color: var(--netflix-red) !important;
+}
+
+.logoutbtn:hover {
+  transform: scale(1.05);
+  background: rgba(255, 255, 255, 0.2) !important;
+}
+
+.profile-section {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+}
+
+.logo-filter {
+  filter: brightness(0) invert(1);
+}
+
+.netflix-red-text {
+  color: var(--netflix-red);
+}
+
+.border-netflix {
+  border-color: var(--netflix-red) !important;
+}
+
+.shadow-netflix {
+  box-shadow: 0 4px 15px rgba(229, 9, 20, 0.3);
+}
+
+.transition-all {
+  transition: all 0.3s ease;
+}

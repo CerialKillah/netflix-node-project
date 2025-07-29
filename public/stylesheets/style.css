@@ -1,0 +1,27 @@
+ body {
+      background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+      min-height: 100vh;
+    }
+
+    .btn-netflix {
+      background: #e50914;
+      border-color: #e50914;
+      color: #fff;
+    }
+
+    .btn-netflix:hover {
+      background: #b20710;
+      border-color: #b20710;
+      color: #fff;
+    }
+
+    #posterPreview {
+      transition: all 0.3s ease;
+      border: 2px solid #ddd;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #posterPreview:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
+    }
